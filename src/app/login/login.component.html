@@ -1,0 +1,16 @@
+<div class="container">
+  <h1><strong>Welcome! Please login!</strong></h1>
+
+  <div class="login">
+    <div class="input-group form-group">
+      <span class="input-group-addon"><i class="fa fa-user-o fa-fw"></i></span>
+      <input class="form-control" type="email" [(ngModel)]="userToLogin.username" placeholder="Username">
+    </div>
+    <div class="input-group form-group">
+      <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+      <input class="form-control" type="password" [(ngModel)]="userToLogin.pass" placeholder="Password">
+    </div>
+    <button class="form-control btn btn-success" (click)="login()">Login</button>
+  </div>
+  <p *ngIf="errorMessage">Your credentials are wrong! Please try again!</p>
+</div>
