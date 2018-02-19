@@ -1,1 +1,27 @@
 Welcome, {{loggedInTenant.username}}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Month</th>
+      <th scope="col">Cold Water</th>
+      <th scope="col">Warm Water</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let currentIndex of currentIndexes'>
+      <td>{{currentIndex.month}}</td>
+      <td>{{currentIndex.valueColdWater}}</td>
+      <td>{{currentIndex.valueHotWater}}</td>
+    </tr>
+    <tr>
+  </tbody>
+</table>
+
+Month
+<input [(ngModel)]="newIndex.month">
+Cold Water
+<input [(ngModel)]="newIndex.valueColdWater">
+Warm Water
+<input [(ngModel)]="newIndex.valueHotWater">
+<button (click)="addIndex(newIndex)">Add index</button>
